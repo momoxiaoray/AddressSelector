@@ -138,7 +138,7 @@ public class AddressSelector extends Dialog {
         addressListView.initData(INDEX);
         addressListViews.add(addressListView);
         viewPagerAdapter.notifyDataSetChanged();
-        //这里加个跳转，如果toiId不为空，则表示点击了地址，要自动跳转到下一个地址选择列表
+        //这里加个跳转，自动跳转到下一个地址选择列表
         viewPager.setCurrentItem(selectPosition + 1, true);
     }
 
