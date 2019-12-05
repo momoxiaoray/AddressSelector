@@ -148,14 +148,7 @@ public class AddressSelector extends Dialog {
      * @return
      */
     private List<String> getSelectAddress() {
-        //这里获取最终的地址字符串，先过滤掉除了root的地址，再添加在后面
-        List<String> titleIndex = new ArrayList<>();
-        for (int i = 0; i < addressTitle.size(); i++) {
-            if (i != 0) {
-                titleIndex.add(addressTitle.get(i));
-            }
-        }
-        addressTitle.removeAll(titleIndex);
+        addressTitle.clear();
         for (int i = 0; i < addressListViews.size(); i++) {
             addressTitle.add(addressListViews.get(i).getSelectAddress().getTitle());
         }
